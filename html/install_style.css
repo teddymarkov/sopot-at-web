@@ -1,0 +1,70 @@
+/* Fonts */
+@font-face {
+	font-family: "Akrobat Black";
+	src: url('./html/fonts/Akrobat-Black.otf');
+	src: local('Akrobat-Black'), local('Akrobat Black'), url('./html/fonts/Akrobat-Black.otf') format('OpenType');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Akrobat Thin";
+	src: url('./html/fonts/Akrobat-Thin.otf');
+	src: local('Akrobat-Thin'), local('Akrobat Thin'), url('./html/fonts/Akrobat-Thin.otf') format('OpenType');
+	font-weight: normal;
+}
+
+/*
+ * -< HEADER >-
+ */
+#heading_title_install {
+font-family: Akrobat Black;
+font-size: 72pt;
+color: RGB(121, 0, 26);
+}
+
+#heading_title_part_two_install {
+font-family: Akrobat Thin;
+font-size: 70pt;
+color: black;
+}
+
+#heading_title_part_three_install {
+font-family: Akrobat Thin;
+font-size: 46pt;
+color: black;
+}
+
+/*
+ * -< FORM >-
+ */
+
+.ui_form_input_div {
+}
+
+#web_title  {
+margin-left: 55px;
+}
+
+#install_form  {
+padding-left: 45px;
+padding-top: 30px;
+padding-bottom: 30px;
+margin-left: 55px;
+width: 70%;
+border-radius: 25px;
+background-color: RGB(0, 59, 41);
+color: white;
+font-family: FreeSans;
+font-size: 14pt;
+min-width: 400px;
+}
+
+input  {
+padding: 2px;
+padding-left: 5px;
+border: 0;
+background-color: white;
+color: black;
+font-family: FreeSans;
+font-size: 14pt;
+}
