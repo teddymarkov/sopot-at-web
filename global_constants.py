@@ -27,7 +27,6 @@ CMS_PAGE_TITLE = "Sopot Management"
 # -< OOUO >-
 
 # -< HARD CODED VALUES >-
-MENU_CONTENT = {"home": "", "products": "", "contacts": ""}    # Defines the names and the links for the menu
 # Username requirements
 USERNAME_MIN_LENGTH = 5
 USERNAME_MAX_LENGTH = 40
@@ -42,7 +41,16 @@ WEBSITE_DOMAIN_MAX_LENGTH = 200
 # -< HCV >-
 
 # -< Templates >-
-MENU_BUTTON_FORMAT = indent_x_2 + '<a id="menu_button" href="%(target_link)s">%(button_name)s</a>'
+MENU_BUTTON_FORMAT = indent_x_3 + '<a id="menu_button" href="%(target_link)s">%(button_name)s</a>'
+CMS_MENU_BUTTON_FORMAT = indent_x_3 + '<a class="cms_menu_buttons" href="%(target_link)s">%(button_name)s</a>'
+# Defines the names and the links for the menu
+MENU_CONTENT = ""
+CMS_MENU_CONTENT = ({"New Article":""},
+                    {"Articles": ""},
+                    {"New Page": ""},
+                    {"Pages": ""},
+                    {"Settings": ""},
+                    {"Design": ""})
 # -< TMPL >-
 
 # -< DATABASE >-
