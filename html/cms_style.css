@@ -14,6 +14,20 @@
 }
 
 /*
+ * -< BODY >-
+ */
+
+*  {
+margin: 0;
+    padding: 0;
+    color: black;
+}
+
+body  {
+    background: RGB(30, 30, 30);
+}
+
+/*
  * -< HEADER >-
  */
 #heading_title_cms {
@@ -25,37 +39,60 @@ color: RGB(121, 0, 26);
 #heading_title_part_two_cms {
 font-family: Akrobat Thin;
 font-size: 30pt;
-color: black;
+color: RGB(230, 230, 230);
 }
 
 #heading_title_part_three_cms {
 font-family: Akrobat Thin;
 font-size: 16pt;
-color: black;
+color: RGB(230, 230, 230);
 }
 
 .ui_form_input_div {
 }
 
 #web_title  {
-margin-left: 25px;
+margin-left: 10px;
 }
 
 /*
  * -< CMS MENU >-
  */
 #cms_menu  {
-padding-left: 45px;
-padding-top: 30px;
-padding-bottom: 30px;
-margin-left: 55px;
-width: 70%;
-border-radius: 25px;
-background-color: RGB(0, 59, 41);
-color: white;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
 font-family: FreeSans;
-font-size: 14pt;
-min-width: 400px;
+font-size: 12pt;
+}
+
+# cms_buttons  {
+}
+
+.cms_menu_buttons  {
+    display: block;
+    width: 190px;
+    margin-bottom: 5px;
+    padding: 3px;
+    border-style: solid hidden solid solid;
+    border-width: 1px;
+    border-color: RGB(230, 230, 230)
+}
+.cms_menu_buttons:link  {
+    text-decoration: none;
+    color: RGB(230, 230, 230)
+}
+.cms_menu_buttons:hover  {
+    text-decoration: none;
+    color: grey;
+}
+.cms_menu_buttons:visited  {
+    text-decoration: none;
+    color: RGB(230, 230, 230)
+}
+.cms_menu_buttons:active  {
+    text-decoration: none;
+    color: grey;
 }
 
 input  {
