@@ -5,7 +5,7 @@ import cgi
 import build_db
 import db_editor
 import global_constants
-from utilities import Print
+import utilities
 
 print "Content-type:text/html\n"
 print ""
@@ -90,15 +90,35 @@ def build_output():
     """
 
     style_path = global_constants.DEFAULT_HTML_PATH + global_constants.INSTALL_STYLE_FILE_NAME
-    install_js_path = global_constants.CMS_JS_FILE_PATH + global_constants.CMS_INSTALL_PAGE_JS_FILE_NAME
+    js_path = global_constants.JS_FILE_PATH + global_constants.INSTALL_JS_FILE_NAME
     page_title = global_constants.INSTALL_PAGE_TITLE
+
     # Instantiate print utilities
-    print_instance = Print()
-    # Output the page content
-    print_instance.print_head(page_title, style_path, install_js_path)
-    print_instance.print_header('<h1 id="heading_title_install">SOPOT<span id="heading_title_part_two_install">@WEB <span id="heading_title_part_three_install">v.1.0.0.d</span></span></h1>', "")
-    print_instance.print_installation_form()
-    print_instance.print_end()
+    util = utilities.Utilities()
+    print_ins = util.print_template
+    item_loader = utilities.PrintCMS()
+
+    # Output the head
+    head_arguments = {'page_title': page_title,
+                      'stylesheet_path': style_path,
+                      'install_js_path': js_path}
+    print_ins(item_loader.cms_head, head_arguments)
+
+    # Output the header
+    heading_title = '<h1 id="heading_title_install">SOPOT<span id="heading_title_part_two_install">@WEB '\
+                    '<span id="heading_title_part_three_install">v.1.0.0.d</span></span></h1>'
+    header_arguments = {'web_title': heading_title,
+                        'sub_title': ""}
+    print_ins(item_loader.cms_header, header_arguments)
+
+    # Output the installation form
+    print_ins(item_loader.install_form)
+
+    # Output the footer
+    print_ins(item_loader.cms_footer)
+
+    # Output the end
+    print_ins(item_loader.end)
 
 
 def initiate_installation(form):

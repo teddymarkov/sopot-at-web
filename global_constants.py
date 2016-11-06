@@ -9,15 +9,15 @@ indent_x_5 = "                    "
 # -< Paths >-
 DEFAULT_PYTHON_PATH = "./"
 DEFAULT_HTML_PATH = "./html/"
+JS_FILE_PATH = "./js/"
 DB_PATH = "./db/"
 DB_NAME = "sopot.db"
 INSTALL_STYLE_FILE_NAME = "install_style.css"
+INSTALL_JS_FILE_NAME = "install_page.js"
 CMS_PYTHON_PATH = "./"
 CMS_HTML_PATH = "./html/"
 CMS_STYLE_FILE_NAME = "cms_style.css"
-CMS_JS_FILE_PATH = "./js/"
 CMS_COMMON_JS_FILE_NAME = "cms_common_functions.js"
-CMS_INSTALL_PAGE_JS_FILE_NAME = "install_page.js"
 
 # -< PTH >-
 
@@ -45,7 +45,7 @@ MENU_BUTTON_FORMAT = indent_x_3 + '<a id="menu_button" href="%(target_link)s">%(
 CMS_MENU_BUTTON_FORMAT = indent_x_3 + '<a class="cms_menu_buttons" href="%(target_link)s">%(button_name)s</a>'
 # Defines the names and the links for the menu
 MENU_CONTENT = ""
-CMS_MENU_CONTENT = ({"New Article":""},
+CMS_MENU_CONTENT = ({"New Article": ""},
                     {"Articles": ""},
                     {"New Page": ""},
                     {"Pages": ""},
